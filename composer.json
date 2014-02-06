@@ -9,7 +9,7 @@
     },
     "suggest": {
         "chh/cache-service-provider": "~1.0"
-    }
+    },
     "autoload": {
         "psr-0": {
             "Maxwell2022": "src/"
