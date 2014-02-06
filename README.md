@@ -51,7 +51,6 @@ $app->register(new \CHH\Silex\CacheServiceProvider, array(
 
 $app->register(new \Maxwell2022\Silex\Provider\YamlConfigProvider(), array(
     'config.file' => __DIR__.'/Config/config.yml',
-    'config.cache' => $app['cache']
 ));
 ```
 
