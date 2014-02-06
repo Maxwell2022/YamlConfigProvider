@@ -1,15 +1,16 @@
 YamlConfigProvider
 ==================
 
-Silex Provider to parse YAML configuration file and cache it if possible
+Silex Provider to parse YAML configuration file and cache it if cache is registered
 
-[![Latest Stable Version](https://poser.pugx.org/maxwell2022/yamlconfigprovider/v/stable.png)](https://packagist.org/packages/maxwell2022/yamlconfigprovider)
-
-[![Total Downloads](https://poser.pugx.org/maxwell2022/yamlconfigprovider/downloads.png)](https://packagist.org/packages/maxwell2022/yamlconfigprovider)
+[![Latest Stable Version](https://poser.pugx.org/maxwell2022/yamlconfigprovider/v/stable.png)](https://packagist.org/packages/maxwell2022/yamlconfigprovider) [![Total Downloads](https://poser.pugx.org/maxwell2022/yamlconfigprovider/downloads.png)](https://packagist.org/packages/maxwell2022/yamlconfigprovider)
 
 
-This Provider is inspired by https://github.com/deralex/YamlConfigServiceProvider
-The difference is that the config is lazy loaded and that I'm caching the configuration to avoid to parse it at every page load.
+This Provider is inspired by [deralex](https://github.com/deralex/YamlConfigServiceProvider)
+
+The difference is that the configuration is:
+- Lazy loaded
+- Cached to avoid to parse it at every page load (if cache is registered)
 
 # Installation
 
@@ -21,15 +22,19 @@ Using your composer.json:
 }
 ```
 
+```shell
+$ ./composer.phar update
+```
+
 # Provider registration
 
 ```php
 $app->register(new Zumny\Core\Silex\Provider\YamlConfigServiceProvider(), array(
-    'config.file' => __DIR__.'/Config/config.yml'
+    'config.file' => __DIR__.'/config/config.yml'
 ));
 ```
 
-# Exemple using cache
+# Example using cache
 
 ```php
 $app['cache.path'] = __DIR__.'/../cache';
