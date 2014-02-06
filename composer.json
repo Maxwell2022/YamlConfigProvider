@@ -1,0 +1,18 @@
+{
+    "name": "maxwell2022/yamlconfigprovider",
+    "homepage": "https://github.com/Maxwell2022/YamlConfigProvider",
+    "keywords": ["silex","config","yaml"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "symfony/yaml": "~2.4"
+    },
+    "suggest": {
+        "chh/cache-service-provider": "~1.0"
+    }
+    "autoload": {
+        "psr-0": {
+            "Maxwell2022": "src/"
+        }
+    }
+}
