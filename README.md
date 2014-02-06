@@ -29,7 +29,7 @@ $ ./composer.phar update
 # Provider registration
 
 ```php
-$app->register(new Zumny\Core\Silex\Provider\YamlConfigServiceProvider(), array(
+$app->register(new \Maxwell2022\Silex\Provider\YamlConfigProvider(), array(
     'config.file' => __DIR__.'/config/config.yml'
 ));
 ```
@@ -49,7 +49,7 @@ $app->register(new \CHH\Silex\CacheServiceProvider, array(
     )
 ));
 
-$app->register(new Zumny\Core\Silex\Provider\YamlConfigServiceProvider(), array(
+$app->register(new \Maxwell2022\Silex\Provider\YamlConfigProvider(), array(
     'config.file' => __DIR__.'/Config/config.yml',
     'config.cache' => $app['cache']
 ));
